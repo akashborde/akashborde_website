@@ -1,0 +1,17 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+
+	<!-- <h1>Blog home!</h1> -->
+
+	<!--Code Block, posts variable is the key of the contexts dictionary passed in earlier-->
+	<!-- logic with if statemens and for loops -->
+	{% for post in posts %} 
+		<!-- accessing post variable with double curlies -->
+		<h1>{{ post.title }}</h1> 
+		<p> By {{ post.author }} on {{ post.date_posted }} </p>
+		<p>{{ post.content }}</p>
+		
+	{% endfor %} <!-- end of the for loop -->
+
+{% endblock content %}
